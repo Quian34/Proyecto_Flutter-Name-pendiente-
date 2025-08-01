@@ -1,0 +1,9 @@
+export 'Mov_Respiratorio.dart';
+export 'Vol_Tidal.dart';
+export 'Po2.dart';
+export 'flujo_ins.dart';
+export 'Pr_atm.dart';
+export 'Transformada1.dart';
+export 'Tubo_endo.dart';
+export 'Freq_resp.dart';
+export 'Vol_min.dart';
