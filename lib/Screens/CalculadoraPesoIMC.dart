@@ -41,11 +41,23 @@ class _CalculadoraPesoIMCState extends State<CalculadoraPesoIMC> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(title: Text('Calculadora Peso Ideal e IMC')),
+        appBar: AppBar(title: Text('Calculadora Peso Ideal e IMC'),
+        actions: [
+        IconButton(
+          icon: const Icon(Icons.arrow_back),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          tooltip: 'Regresar',
+        ),
+      ],
+        ),
+
         body: Padding(
           padding: EdgeInsets.all(16),
           child: Column(
             children: [
+              
               TextField(
                 controller: pesoController,
                 keyboardType: TextInputType.number,

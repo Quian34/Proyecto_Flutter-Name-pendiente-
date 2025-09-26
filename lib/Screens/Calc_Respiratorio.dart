@@ -7,7 +7,18 @@ class Calc_Respiratorio extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Herramientas de Cálculo')),
+      appBar: AppBar(
+      title: const Text('Herramientas de Cálculo'),
+      actions: [
+        IconButton(
+          icon: const Icon(Icons.arrow_back),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          tooltip: 'Regresar',
+        ),
+      ],
+      ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
