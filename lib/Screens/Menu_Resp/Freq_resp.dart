@@ -74,15 +74,13 @@ void _calcularFreqRespIdeal() {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('Calcular Frecuencia Respiratoria'),
-      actions: [
-        IconButton(
+        leading: IconButton(
           icon: const Icon(Icons.arrow_back),
           onPressed: () {
             Navigator.pop(context);
           },
           tooltip: 'Regresar',
         ),
-      ],
     ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(16.0),

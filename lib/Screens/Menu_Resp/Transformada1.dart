@@ -63,15 +63,13 @@ void initState() {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('Conversión ml/s ↔ L/min'),
-        actions: [
-        IconButton(
+        leading: IconButton(
           icon: const Icon(Icons.arrow_back),
           onPressed: () {
             Navigator.pop(context);
           },
           tooltip: 'Regresar',
         ),
-      ],
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),

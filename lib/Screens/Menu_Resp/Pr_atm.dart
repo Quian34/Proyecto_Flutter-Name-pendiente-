@@ -30,20 +30,12 @@ class _CalculadoraPresionPageState extends State<CalculadoraPresionPage> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Calculadora de Presión'),
-        actions: [
-        IconButton(
-          icon: const Icon(Icons.arrow_back),
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          tooltip: 'Regresar',
-        ),
-      ],
-        leading: IconButton(
-          icon: Icon(Icons.arrow_back),
-          onPressed: () {
-            Navigator.pop(context); // Regresa a main.dart o pantalla anterior
-          },
+          leading: IconButton(
+              icon: const Icon(Icons.arrow_back),
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              tooltip: 'Regresar',
         ),
       ),
       body: Padding(

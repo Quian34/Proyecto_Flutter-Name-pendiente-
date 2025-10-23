@@ -35,15 +35,13 @@ class _PO2CalculatorState extends State<PO2Calculator> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Cálculo de PO2'),
-                actions: [
-        IconButton(
+        leading: IconButton(
           icon: const Icon(Icons.arrow_back),
           onPressed: () {
             Navigator.pop(context);
           },
           tooltip: 'Regresar',
         ),
-      ],
       ),
       body: Padding(
         padding: EdgeInsets.all(16),

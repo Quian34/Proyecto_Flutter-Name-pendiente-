@@ -42,17 +42,14 @@ class _CalculadoraPesoIMCState extends State<CalculadoraPesoIMC> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(title: Text('Calculadora Peso Ideal e IMC'),
-        actions: [
-        IconButton(
-          icon: const Icon(Icons.arrow_back),
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          tooltip: 'Regresar',
+          leading: IconButton(
+            icon: const Icon(Icons.arrow_back),
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            tooltip: 'Regresar',
+          ),
         ),
-      ],
-        ),
-
         body: Padding(
           padding: EdgeInsets.all(16),
           child: Column(
@@ -102,8 +99,9 @@ class _CalculadoraPesoIMCState extends State<CalculadoraPesoIMC> {
                 child: Text('Calcular'),
               ),
               SizedBox(height: 20),
+
+              if (pesoIdeal.isNotEmpty) Text('Peso Ideal: $pesoIdeal'),
               if (imc != null) Text('IMC: ${imc!.toStringAsFixed(2)}'),
-              if (pesoIdeal.isNotEmpty) Text('Peso Ideal aproximado: $pesoIdeal'),
             ],
           ),
         ),

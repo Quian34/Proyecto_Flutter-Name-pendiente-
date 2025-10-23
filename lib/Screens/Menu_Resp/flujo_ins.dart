@@ -5,10 +5,7 @@ class FlujoInsp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Calcular Flujo Respiratorio',
-      home: const Flujo(),
-    );
+    return const Flujo();
   }
 }
 
@@ -171,17 +168,17 @@ class _FlujoState extends State<Flujo> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Calcular Flujo Respiratorio'),
-      actions: [
-        IconButton(
+      appBar: AppBar(
+        title: const Text('Calcular Flujo Inspiratorio'),
+        leading: IconButton(
           icon: const Icon(Icons.arrow_back),
           onPressed: () {
             Navigator.pop(context);
           },
           tooltip: 'Regresar',
         ),
-      ],
-    ),
+      ),
+
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(16.0),
         child: Column(

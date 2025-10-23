@@ -97,22 +97,22 @@ class _VolTidalState extends State<VolTidal> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Cálculo Volumen Tidal'),
-        actions: [
-        IconButton(
+        leading: IconButton(
           icon: const Icon(Icons.arrow_back),
           onPressed: () {
             Navigator.pop(context);
           },
           tooltip: 'Regresar',
         ),
-      ],
       ),
+
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(16),
         child: Form(
           key: _formKey,
           child: Column(
             children: [
+              Image.asset('/pics/formula_2.png', height: 150),
               // Sección Volumen Tidal Suministrado (original)
               TextFormField(
                 controller: _vtProgController,

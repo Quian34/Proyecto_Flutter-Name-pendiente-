@@ -63,7 +63,7 @@ class _RespiratoryCalculatorState extends State<RespiratoryCalculator> {
         padding: const EdgeInsets.all(16.0),
         child: Column(
           children: [
-            Image.asset('pics/formula_1.png', height: 150), // Imagen de la fórmula
+            Image.asset('/pics/formula_1.png', height: 150), // Imagen de la fórmula
             SizedBox(height: 20),
             TextField(
               controller: _volumenController,

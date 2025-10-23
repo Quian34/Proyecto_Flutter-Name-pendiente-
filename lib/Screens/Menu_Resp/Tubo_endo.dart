@@ -6,10 +6,7 @@ class espacio_tubo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Calcular Flujo Respiratorio',
-      home: const endotraquial(),
-    );
+    return const endotraquial();
   }
 }
 class endotraquial extends StatefulWidget {
@@ -52,15 +49,13 @@ void dispose() {
  Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('Volumen Interno Endotraquial'),
-        actions: [
-        IconButton(
+        leading: IconButton(
           icon: const Icon(Icons.arrow_back),
           onPressed: () {
             Navigator.pop(context);
           },
           tooltip: 'Regresar',
         ),
-      ],
       ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(16.0),

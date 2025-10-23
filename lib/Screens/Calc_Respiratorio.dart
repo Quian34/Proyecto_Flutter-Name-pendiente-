@@ -8,16 +8,7 @@ class Calc_Respiratorio extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-      title: const Text('Herramientas de Cálculo'),
-      actions: [
-        IconButton(
-          icon: const Icon(Icons.arrow_back),
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          tooltip: 'Regresar',
-        ),
-      ],
+      title: const Text('Herramientas de Cálculo Respiratorio'),
       ),
       body: Center(
         child: Column(
@@ -70,7 +61,27 @@ class Calc_Respiratorio extends StatelessWidget {
                   MaterialPageRoute(builder: (context) => const CalculadoraPresionPage()),
                   );                
               },
-              child: const Text('Flujo Inspiratorio'),
+              child: const Text('Presión Atmosférica'),
+            ),
+            const SizedBox(height: 20), // Espacio entre botones
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const espacio_tubo()),
+                );
+              },
+              child: const Text('Volumen Interno Endotraquial'),
+            ),
+            const SizedBox(height: 20), // Espacio entre botones
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const Transformada()),
+                );
+              },
+              child: const Text('Transformada ml/seg a L/Min '),
             ),
           ],
         ),
